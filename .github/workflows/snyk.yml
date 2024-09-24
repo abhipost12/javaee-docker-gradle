@@ -21,8 +21,9 @@ jobs:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN}}
       with:
         image: your/image-to-test
-        args: --file=javaee-docker-gradle/src/main/docker/Dockerfile
+        args: --file=javaee-docker-gradle/src/main/docker/Dockerfile --sarif-file-output=snyk.sarif
+
     - name: Upload result to GitHub Code Scanning
-      uses: github/codeql-action/upload-sarif@v2
+      uses: github/codeql-action/upload-sarif@v3
       with:
         sarif_file: snyk.sarif
