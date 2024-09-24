@@ -1,0 +1,24 @@
+name: Lint Dockerfile with Hadolint
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+        
+workflow_dispatch
+        
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Hadolint on Dockerfile
+        uses: hadolint/hadolint-action@v2.3.0
+        with:
+          dockerfile: Dockerfile # Path to your Dockerfile
