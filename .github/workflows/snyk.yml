@@ -1,6 +1,7 @@
 name: Snyk Container
-on: push
-    workflow_dispatch:
+on:
+  push:
+  workflow_dispatch: 
 jobs:
   snyk:
     runs-on: ubuntu-latest
