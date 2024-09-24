@@ -18,7 +18,7 @@ jobs:
         # In order to use the Snyk Action you will need to have a Snyk API token.
         # See https://docs.snyk.io/integrations/ci-cd-integrations/github-actions-integration#getting-your-snyk-token
         # or you can sign up for free at https://snyk.io/login
-        SNYK_TOKEN: ${{ secrets.1e7ee772-5ad6-45f8-b009-709617f7c708 }}
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN}}
       with:
         image: your/image-to-test
         args: --file=src/main/dockerDockerfile
