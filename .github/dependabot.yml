@@ -5,7 +5,7 @@ updates:
     schedule:
       interval: "monthly" 
     commit-message:
-      prefix: "gradle-version-updates"
+      prefix: "gradle-version-update"
     groups:
       minor-and-patch:
         applies-to: version-updates
